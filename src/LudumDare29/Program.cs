@@ -1,8 +1,4 @@
-﻿#region Using Statements
-using System;
-using System.Collections.Generic;
-using System.Linq;
-#endregion
+﻿using System;
 
 namespace LudumDare29
 {
@@ -16,9 +12,10 @@ namespace LudumDare29
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+// ReSharper disable once InconsistentNaming
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new Game())
                 game.Run();
         }
     }
