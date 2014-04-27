@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="22" height="12" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Tile Layer 1" width="22" height="12">
+  <properties>
+   <property name="background" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYMAOGNEwtQAnGiYV4HIXI9Q8ct2Lz1xKwoEJTT8yHz0suLCIwcQJuZccjGwnFxnmovsNmxw2NehixIYDunvxpR+YGkLqSAW0yhe0Mhc5rJnI0A8Aut0BxQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="22" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAOOICYGYhZgJgdhxpygAAQcwMxDxDzk6Efl7uUkNiKVHSXFhJbkwxzkd3FygBxN8j9bDjEiaHZ0dzFC3U3yP18OMSJofnR3EstAIoPFSAWBGIhNFoKSZ0kFnl8tDIeOylND7gApekBF6CVe5HDHV944QIA72YFpQ==
+  </data>
+ </layer>
+ <objectgroup name="Lights" width="22" height="12">
+  <object name="1" x="224" y="64" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+   </properties>
+  </object>
+  <object name="3" x="224" y="320" width="64" height="64"/>
+  <object x="608" y="192" width="64" height="64"/>
+  <object name="2" x="288" y="192" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Switches" width="22" height="12">
+  <object name="2" x="224" y="64" width="64" height="64"/>
+  <object name="3" x="224" y="320" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Collision" width="22" height="12" visible="0">
+  <object x="32" y="0" width="64" height="128"/>
+  <object x="96" y="0" width="128" height="192"/>
+  <object x="288" y="0" width="320" height="192"/>
+  <object x="32" y="256" width="192" height="128"/>
+  <object x="288" y="256" width="320" height="128"/>
+  <object x="224" y="0" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Spawn" width="22" height="12" visible="0">
+  <object name="player" x="32" y="128" width="64" height="64"/>
+  <object name="exit" x="544" y="192" width="64" height="64"/>
+ </objectgroup>
+</map>

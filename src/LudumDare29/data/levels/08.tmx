@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="22" height="22" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Tile Layer 1" width="22" height="22">
+  <properties>
+   <property name="background" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy1k8EOwzAIQ5Pckv//4K1SI1kvpmIatcSlBRtMaK0G4xtTogoX77pjFPIuxBu8Ff2yz+3Hvxjt9LaC9+LowvcWb7S3Kbqznf4t5Lg8tzet63e4ukgr6pd8zHczbB90DoI9Kg91du5opz+OV2uzYM8E+8mC8zld9fYXXp3V/VftLLgXgrvKYiR591xZsB/1Uj3Y3907frqb6H12hNPj/+h9c1fk4r1FM7ibcXdGveiWXf0HuJgHPg==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="22" height="22">
+  <data encoding="base64" compression="zlib">
+   eJztVMsKwzAMM3TdBmv3unW3Pi7d/39gVUZAhAwnQccKhIPBrhBWzTS4gg14Ai+inTue4A3swIdw70TvUbj3S+9VsC/4eqaeQm/w9U49hd4p0VPoXcAX+KFeSi/fYUn1/OU7LKmevym/SpHSy3c4gG/7+edVz9/a3Hhztbnx5g69ed/9h3guzhfnprX6vMX54tz0Vp83Rb5i7HrD/yg3Vzl1Bjcmywuc
+  </data>
+ </layer>
+ <objectgroup name="Lights" width="22" height="22" visible="0">
+  <object name="1" x="608" y="128" width="64" height="64"/>
+  <object name="2" x="608" y="320" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+    <property name="small" value="true"/>
+   </properties>
+  </object>
+  <object name="5" x="32" y="640" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+   </properties>
+  </object>
+  <object name="4" x="288" y="320" width="64" height="64">
+   <properties>
+    <property name="small" value="true"/>
+   </properties>
+  </object>
+  <object name="6" x="608" y="448" width="64" height="64">
+   <properties>
+    <property name="small" value="true"/>
+   </properties>
+  </object>
+  <object name="8" x="448" y="320" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+    <property name="small" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Switches" width="22" height="22">
+  <object name="2" x="608" y="448" width="64" height="64"/>
+  <object name="5" x="416" y="640" width="64" height="64"/>
+  <object name="1" x="544" y="192" width="64" height="64"/>
+  <object name="4" x="544" y="192" width="64" height="64"/>
+  <object name="5" x="544" y="192" width="64" height="64"/>
+  <object name="6" x="608" y="448" width="64" height="64"/>
+  <object name="8" x="544" y="192" width="64" height="64"/>
+  <object name="2" x="608" y="128" width="64" height="64"/>
+  <object name="6" x="416" y="640" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Spawn" width="22" height="22" visible="0">
+  <object name="player" x="608" y="640" width="64" height="64"/>
+  <object name="exit" x="352" y="320" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Collision" width="22" height="22">
+  <object x="224" y="384" width="384" height="256"/>
+  <object x="32" y="256" width="128" height="384"/>
+  <object x="32" y="128" width="512" height="128"/>
+  <object x="32" y="0" width="576" height="128"/>
+  <object x="160" y="256" width="448" height="64"/>
+  <object x="608" y="0" width="64" height="64"/>
+ </objectgroup>
+</map>

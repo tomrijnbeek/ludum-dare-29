@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="24" height="4" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Tile Layer 1" width="24" height="4">
+  <properties>
+   <property name="background" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyNkEEKACAIBNWb/v/BFRgsg1CHwVg2XXUz801I1Xc21Zp6SvQQH738p94cKOFq7HV15g3M/4G5uO/kY55X/+l2Z84CMfsBZw==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="24" height="4">
+  <data encoding="base64" compression="zlib">
+   eJzjYGBgYAFiZhJoZiLVsQOxABDzADE3CTQ3ker4gViJgXZAEYhVgFgIiAVpQCsDMQAFlgOC
+  </data>
+ </layer>
+ <objectgroup name="Lights" width="24" height="4">
+  <object x="32" y="64" width="64" height="64">
+   <properties>
+    <property name="enabled" value="true"/>
+    <property name="flickering" value="true"/>
+   </properties>
+  </object>
+  <object x="224" y="64" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+    <property name="flickering" value="true"/>
+   </properties>
+  </object>
+  <object x="448" y="64" width="64" height="64">
+   <properties>
+    <property name="enabled" value="true"/>
+    <property name="flickering" value="true"/>
+   </properties>
+  </object>
+  <object x="672" y="64" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+    <property name="flickering" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Collision" width="24" height="4" visible="0">
+  <object x="32" y="0" width="704" height="64"/>
+ </objectgroup>
+ <objectgroup name="Spawn" width="24" height="4" visible="0">
+  <object name="player" x="32" y="64" width="64" height="64"/>
+  <object name="exit" x="672" y="64" width="64" height="64"/>
+ </objectgroup>
+</map>

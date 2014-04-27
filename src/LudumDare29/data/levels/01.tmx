@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="48" height="16" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Tile Layer 1" width="48" height="16">
+  <properties>
+   <property name="background" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztlFEKgCAQRF3/8v4Hro+Ex7DRmoYGDSxKsDk+l7GUkh2Vj9rOKtirCiqjN7qOVvUZPc/kDlvjOsIr/5PFL+/inWfSE+HOnqdSn/Rj8K17zz/Z3/HO2Pfw1/dW/9W3lvaRZYSn9qRgnyePP+efxfdSpqzImcqf356uVepZ7+HNSIt/5d+aV3e5ovPAHL2qHv693EfkWIu8+f+SRuXPLP3854qZsSp/LyO8zFmRfyTXV+YfyfU3+e+WMwbI
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="48" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztllsLwjAMhQPeCt6mb/rm5UX//w80L8IhpqfpXIcDD4SsW/aFljRtEpG52szxK/lUIvEl7/GiSsBCTqe2UVs7fu9wWHzJe7yoOmAh50r+uTjvWHxJHi8qzIucJzyf1M4wfjgcG39UOxBf4kWFeZGD81qoLc3Y1jB+j6yn5SOvZv/k8uK8tmo7M7Y1jN8j62n5yKvZP7m8rev5G34k7114/TJ/C+Sq3S9D5R1Kub4xFeX6xlT0X/+2YvehPufF2GL3oT7nxdiq6e+/uP7v8yPSu1v07RfDMw3L
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="48" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUgIAoEIvR2HwRIBYmgybGXbJALEd1V6OaLwPE0mTQtHTXKBgFo2AUjIJRMApIAwBC7QNf
+  </data>
+ </layer>
+ <objectgroup name="Collision" width="48" height="16">
+  <object x="0" y="0" width="32" height="256"/>
+  <object x="96" y="128" width="64" height="64"/>
+  <object x="32" y="0" width="192" height="64"/>
+  <object x="224" y="0" width="192" height="192"/>
+  <object x="480" y="128" width="320" height="320"/>
+  <object x="480" y="448" width="64" height="64"/>
+  <object x="864" y="256" width="640" height="256"/>
+  <object x="1440" y="0" width="64" height="256"/>
+  <object x="864" y="0" width="512" height="192"/>
+  <object x="1376" y="0" width="64" height="64"/>
+  <object x="416" y="0" width="448" height="64"/>
+  <object x="32" y="256" width="448" height="64"/>
+ </objectgroup>
+ <objectgroup name="Spawn" width="48" height="16" visible="0">
+  <object name="player" x="32" y="64" width="64" height="64"/>
+  <object name="exit" x="1376" y="64" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Text" width="48" height="16">
+  <object name="0" x="32" y="256" width="32" height="32"/>
+  <object name="1" x="32" y="-32" width="32" height="32"/>
+  <object name="2" x="448" y="256" width="32" height="32"/>
+  <object name="3" x="576" y="128" width="32" height="32"/>
+  <object name="5" x="928" y="256" width="32" height="32"/>
+  <object name="6" x="544" y="544" width="32" height="32"/>
+  <object name="4" x="1120" y="96" width="32" height="32"/>
+  <object name="7" x="1344" y="-32" width="32" height="32"/>
+ </objectgroup>
+</map>

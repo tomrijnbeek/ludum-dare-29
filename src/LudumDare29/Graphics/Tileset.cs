@@ -28,13 +28,19 @@ namespace LudumDare29.Graphics
             this.height = texture.Height / tileHeight;
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 position, int i, int j, Color color)
+        public void Draw(SpriteBatch spriteBatch, Vector2 position, int i, int j, Color color, bool mirrored = false)
         {
             if (i >= this.Width || j >= this.Height)
                 throw new ArgumentOutOfRangeException();
 
             spriteBatch.Draw(this.texture, position,
-                new Rectangle(i * this.tileWidth, j * this.tileHeight, this.tileWidth, this.tileHeight), color);
+                new Rectangle(i * this.tileWidth, j * this.tileHeight, this.tileWidth, this.tileHeight), color, 0,
+                Vector2.Zero, Vector2.One, mirrored ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
+        }
+
+        public void Draw(SpriteBatch spriteBatch, Vector2 position, Point point, Color color, bool mirrored = false)
+        {
+            this.Draw(spriteBatch, position, point.X, point.Y, color, mirrored);
         }
     }
 }

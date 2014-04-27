@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="12" height="10" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Tile Layer 1" width="12" height="10">
+  <properties>
+   <property name="background" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYKQRZgJiTiwYJseERQ8Xmn5c5sLY6ABdDyGAbjYhgO4PYsyHuYmTBPUwPcS4BxZmTFjkAb0wALU=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="12" height="10">
+  <data encoding="base64" compression="zlib">
+   eJzjYGBgYAZiFiJodiAWAGJuIOYhguYHYiUG4oEiEKsAsSAQC0FpKSR5SSRxEK2MxQxk+xSJsFMLia1JhHpam4+snhjzkcMLW3gAALvZA8w=
+  </data>
+ </layer>
+ <objectgroup name="Lights" width="12" height="10" visible="0">
+  <object x="32" y="64" width="64" height="64"/>
+  <object name="1" x="288" y="64" width="64" height="64">
+   <properties>
+    <property name="enabled" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Switches" width="12" height="10">
+  <object name="1" x="32" y="64" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Text" width="12" height="10">
+  <object name="11" x="32" y="-32" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Spawn" width="12" height="10">
+  <object name="player" x="160" y="256" width="64" height="64"/>
+  <object name="exit" x="288" y="64" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Collision" width="12" height="10">
+  <object x="32" y="0" width="320" height="64"/>
+  <object x="32" y="128" width="128" height="192"/>
+  <object x="224" y="128" width="128" height="192"/>
+  <object x="0" y="64" width="32" height="64"/>
+  <object x="352" y="64" width="32" height="64"/>
+ </objectgroup>
+</map>

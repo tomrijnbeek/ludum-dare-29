@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="16" height="16" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Tile Layer 1" width="16" height="16">
+  <properties>
+   <property name="background" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJytUtEKACEIM9/s/z/4XhLG8JpFwihiuqmFmUUDY8Hh9OJtHID5VX5V25enKWonB88gHvep4s9v3lWgFvvv6GMf2EvXP8+Yd3urn1Ch/sltfnf+yK/qKF3cHe9v19fO80nOa3xihwIs
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzjYGBgYAZiFjJodiAWAGJuIOYhg+YHYiUG8oEiEGsh8SWBWBCIhfDQUkjqNdHsVyTCTnT1yPZrEqEfXf2o/YPHflYGwumeDY/9vAyE0z0fHvtJBSD7VRjwp3d8tDIQAwBvkgm5
+  </data>
+ </layer>
+ <objectgroup name="Lights" width="16" height="16">
+  <object x="32" y="64" width="64" height="64"/>
+  <object x="224" y="64" width="64" height="64"/>
+  <object x="416" y="64" width="64" height="64"/>
+  <object x="416" y="448" width="64" height="64"/>
+  <object x="416" y="256" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Text" width="16" height="16">
+  <object name="9" x="128" y="352" width="32" height="32"/>
+  <object name="8" x="64" y="512" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Collision" width="16" height="16">
+  <object x="0" y="0" width="32" height="512"/>
+  <object x="480" y="0" width="32" height="512"/>
+  <object x="32" y="0" width="416" height="64"/>
+  <object x="96" y="128" width="320" height="320"/>
+ </objectgroup>
+ <objectgroup name="Spawn" width="16" height="16">
+  <object name="player" x="32" y="448" width="64" height="64"/>
+  <object name="exit" x="416" y="64" width="64" height="64"/>
+ </objectgroup>
+</map>

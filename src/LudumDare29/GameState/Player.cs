@@ -9,51 +9,89 @@ namespace LudumDare29.GameState
 {
     class Player
     {
-        private const float speed = 128;
+        private const float speed = 192;
 
-        private Vector2 position;
+        public Vector2 Position { get; private set; }
         private Point tilePosition;
 
-        private readonly Level level;
+        private Level level;
 
-        public Player(Level level)
+        private readonly PlayerAnimations animations;
+        private AnimationSequence currentAnim;
+        private bool mirrored;
+
+        public bool Finished { get; private set; }
+
+        public Player(PlayerAnimations animations)
         {
-            this.level = level;
+            this.animations = animations;
+            this.currentAnim = animations.PlayerIdle;
         }
 
-        public void Reset()
+        public void Reset(Level level)
         {
+            this.Finished = false;
+            this.level = level;
             this.tilePosition = this.level.Start;
-            this.position = this.level.GetTileCenter(this.tilePosition);
+            this.Position = this.level.GetTileCenter(this.tilePosition);
         }
 
         public void Update(GameTime gameTime)
         {
             this.handleInput();
+            this.currentAnim.Update(gameTime);
 
             var goal = this.level.GetTileCenter(this.tilePosition);
-            var diff = goal - this.position;
+            var diff = goal - this.Position;
             var dl = diff.Length();
+
+            if (dl < 10 && this.tilePosition == this.level.Exit)
+                this.Finished = true;
+
             if (dl > 0)
             {
                 diff /= dl;
+                this.Position += diff * Math.Min(speed * (float) gameTime.ElapsedGameTime.TotalSeconds, dl);
 
-                this.position += diff * Math.Min(speed * (float) gameTime.ElapsedGameTime.TotalSeconds, dl);
+                if (this.currentAnim != this.animations.PlayerWalking)
+                {
+                    this.currentAnim = this.animations.PlayerWalking;
+                    this.currentAnim.Reset();
+                }
+            }
+            else
+            {
+                if (this.currentAnim != this.animations.PlayerIdle)
+                {
+                    this.currentAnim = this.animations.PlayerIdle;
+                    this.currentAnim.Reset();
+                }
             }
         }
 
         private void handleInput()
         {
-            if ((this.position - this.level.GetTileCenter(this.tilePosition)).LengthSquared() < 0.1f)
+            if ((this.Position - this.level.GetTileCenter(this.tilePosition)).LengthSquared() < 0.1f)
             {
                 if (InputManager.IsKeyPressed(Keys.Left))
+                {
+                    this.mirrored = true;
                     this.tryMove(-1, 0);
+                }
                 else if (InputManager.IsKeyPressed(Keys.Right))
+                {
                     this.tryMove(1, 0);
+                    this.mirrored = false;
+                }
                 else if (InputManager.IsKeyPressed(Keys.Up))
                     this.tryMove(0, -1);
                 else if (InputManager.IsKeyPressed(Keys.Down))
                     this.tryMove(0, 1);
+
+                if (InputManager.IsKeyHit(Keys.Space))
+                    if (this.level.Switches.ContainsKey(this.tilePosition))
+                        foreach (var l in this.level.Switches[this.tilePosition])
+                            this.level.Lights[l].Toggle(this.level);
             }
         }
 
@@ -72,8 +110,8 @@ namespace LudumDare29.GameState
 
         public void Draw(SpriteManager sprites)
         {
-            sprites.SpriteBatch.Draw(sprites.Player,
-                this.position - 0.5f * new Vector2(sprites.Player.Width, sprites.Player.Height), Color.White);
+            this.currentAnim.Draw(sprites,
+                this.Position - 0.5f * new Vector2(this.currentAnim.Width, this.currentAnim.Height) - sprites.DrawOffset, Color.White, this.mirrored);
         }
     }
 }
